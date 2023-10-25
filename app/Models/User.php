@@ -8,17 +8,18 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+// Nama : Makiyah Azahra
+// Kelas : D3IF46-03
+// NIM : 6706220059
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-    /**
-     * The attributes that are mass assignable.
-     * Nama     : Davin Wahyu Wardana
-     * NIM      : 6706223003
-     * Kelas    : 4603
-     * @var array<int, string>
-     */
+        /**
+         * The attributes that are mass assignable.
+         * @var array<int, string>
+         */
     protected $fillable = [
         'username',
         'fullname',
@@ -50,4 +51,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function setPasswordAttribute($password)
+    {
+        if ($password) {
+            $this->attributes['password'] = bcrypt($password);
+        }
+    }
 }

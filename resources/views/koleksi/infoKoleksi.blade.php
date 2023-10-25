@@ -1,10 +1,13 @@
 <x-app-layout>
+    // Nama : Makiyah Azahra
+    // Kelas : D3IF46-03
+    // NIM : 6706220059
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Informasi Koleksi') }}
         </h2>
     </x-slot>
-
+@section('content')
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -18,10 +21,10 @@
             </div>
         </div>
     </div>
-
     <script>
         function goBack() {
             window.history.back();
         }
     </script>
+@endsection
 </x-app-layout>
