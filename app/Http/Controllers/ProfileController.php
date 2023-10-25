@@ -1,5 +1,7 @@
 <?php
-
+/*NAMA : LESTARI
+KELAS: D3IF 46-03
+NIM  : 6706223114 */
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
@@ -8,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\User;
 
 class ProfileController extends Controller
 {
@@ -56,5 +59,19 @@ class ProfileController extends Controller
         $request->session()->regenerateToken();
 
         return Redirect::to('/');
+    }
+
+    // display list
+    public function index()
+    {
+        $users = User::all();
+
+        return view('user.daftarPengguna', compact(var_name: 'users'));
+    }
+
+    // display particular user
+    public function show(User $user)
+    {
+        return view('user.infoPengguna', ['user' => $user]);
     }
 }
