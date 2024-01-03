@@ -1,7 +1,7 @@
 <?php
-/*NAMA : LESTARI
+/*NAMA : Makiyah Azahra
 KELAS: D3IF 46-03
-NIM  : 6706223114 */
+NIM  : 6706220059 */
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
