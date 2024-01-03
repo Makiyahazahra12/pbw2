@@ -14,8 +14,8 @@ class User extends Authenticatable
 
     /**
      * The attributes that are mass assignable.
-     * Nama     : Davin Wahyu Wardana
-     * NIM      : 6706223003
+     * Nama     : Makiyah azahra
+     * NIM      : 6706220059
      * Kelas    : 4603
      * @var array<int, string>
      */
